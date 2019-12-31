@@ -13,12 +13,14 @@ func main(){
     c := N/b
     d := 0
 
-    if (N - c*b) >= K && N- c*b > 0{
-      d = (N- c*b) - K +1
+    if (N - c*b) >= K && K==0{
+      d = (N- c*b) - K
+    }else if (N - c*b) >= K{
+      d = (N- c*b) -K +1
     }else{
       d = 0
     }
-    fmt.Println(b,c,d, c*(b-K) + d)
+    // fmt.Println(b,c,d, c*(b-K) + d)
     result += c*(b-K) + d
   }
   fmt.Println(result)
